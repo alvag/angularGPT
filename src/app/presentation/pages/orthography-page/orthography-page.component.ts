@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { ChatMessageComponent, MyMessageComponent } from '@components/index';
+import { ChatMessageComponent, MyMessageComponent, TypingLoaderComponent } from '@components/index';
 
 
 @Component( {
@@ -8,6 +8,7 @@ import { ChatMessageComponent, MyMessageComponent } from '@components/index';
   imports: [
     ChatMessageComponent,
     MyMessageComponent,
+    TypingLoaderComponent,
   ],
   templateUrl: './orthography-page.component.html',
   styleUrl: './orthography-page.component.scss',
