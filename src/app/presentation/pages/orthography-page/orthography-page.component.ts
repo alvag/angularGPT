@@ -3,6 +3,8 @@ import {
   ChatMessageComponent,
   MyMessageComponent,
   TextMessageBoxComponent,
+  TextMessageBoxFileComponent,
+  TextMessageEvent,
   TypingLoaderComponent,
 } from '@components/index';
 
@@ -15,6 +17,7 @@ import {
     MyMessageComponent,
     TypingLoaderComponent,
     TextMessageBoxComponent,
+    TextMessageBoxFileComponent,
   ],
   templateUrl: './orthography-page.component.html',
   styleUrl: './orthography-page.component.scss',
@@ -22,8 +25,8 @@ import {
 } )
 export default class OrthographyPageComponent {
 
-  handleMessage( message: string ) {
-
+  handleMessageWithFile( { prompt, file }: TextMessageEvent ) {
+    console.log( { prompt, file } );
   }
 
 }
