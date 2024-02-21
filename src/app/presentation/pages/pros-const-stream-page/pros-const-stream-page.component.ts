@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './pros-const-stream-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProsConstStreamPageComponent {
+export default class ProsConstStreamPageComponent {
 
 }

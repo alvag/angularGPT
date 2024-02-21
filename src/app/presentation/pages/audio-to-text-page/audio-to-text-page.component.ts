@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './audio-to-text-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AudioToTextPageComponent {
+export default class AudioToTextPageComponent {
 
 }

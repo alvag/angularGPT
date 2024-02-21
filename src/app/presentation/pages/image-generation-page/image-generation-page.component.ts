@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './image-generation-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageGenerationPageComponent {
+export default class ImageGenerationPageComponent {
 
 }

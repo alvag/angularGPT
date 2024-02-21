@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './orthography-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OrthographyPageComponent {
+export default class OrthographyPageComponent {
 
 }

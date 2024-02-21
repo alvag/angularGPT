@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './translate-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TranslatePageComponent {
+export default class TranslatePageComponent {
 
 }

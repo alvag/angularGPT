@@ -8,6 +8,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './image-tunning-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageTunningPageComponent {
+export default class ImageTunningPageComponent {
 
 }
