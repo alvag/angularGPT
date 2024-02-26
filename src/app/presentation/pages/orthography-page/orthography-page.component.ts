@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import {
   ChatMessageComponent,
   MyMessageComponent,
@@ -9,6 +9,7 @@ import {
   TypingLoaderComponent,
 } from '@components/index';
 import { Message } from '@interfaces/message.interface';
+import { OpenaiService } from '@services/openai.service';
 
 
 @Component( {
@@ -33,6 +34,8 @@ export default class OrthographyPageComponent {
     isGpt: true,
   } ] );
   isLoading = signal( false );
+
+  openAiService = inject( OpenaiService );
 
   handleMessageWithSelect( event: TextMessageBoxEvent ) {
     console.log( event );
