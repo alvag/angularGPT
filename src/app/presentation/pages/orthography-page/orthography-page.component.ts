@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import {
   ChatMessageComponent,
   MyMessageComponent,
@@ -8,6 +8,7 @@ import {
   TextMessageBoxSelectComponent,
   TypingLoaderComponent,
 } from '@components/index';
+import { Message } from '@interfaces/message.interface';
 
 
 @Component( {
@@ -26,6 +27,12 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 } )
 export default class OrthographyPageComponent {
+
+  messages = signal<Message[]>( [ {
+    text: 'Hello world!',
+    isGpt: true,
+  } ] );
+  isLoading = signal( false );
 
   handleMessageWithSelect( event: TextMessageBoxEvent ) {
     console.log( event );
