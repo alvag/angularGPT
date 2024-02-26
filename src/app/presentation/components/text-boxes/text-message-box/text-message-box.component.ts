@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component( {
@@ -9,6 +9,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
   ],
   templateUrl: './text-message-box.component.html',
   styleUrl: './text-message-box.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 } )
 export class TextMessageBoxComponent {
   @Input() placeholder = '';

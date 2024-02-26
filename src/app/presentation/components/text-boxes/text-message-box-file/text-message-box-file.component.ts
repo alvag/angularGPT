@@ -18,7 +18,6 @@ export interface TextMessageEvent {
 } )
 export class TextMessageBoxFileComponent {
   @Input() placeholder = '';
-  @Input() disableCorrections = false;
 
   @Output() onMessage = new EventEmitter<TextMessageEvent>();
 

@@ -11,9 +11,14 @@
     </div>
   </div>
 
-  <app-text-message-box-file
+  <app-text-message-box-select
     placeholder="Escribe aqui lo que deseas"
-    (onMessage)="handleMessageWithFile($event)"
+    [options]="[
+    {id: '1', text: 'Opcion 1'},
+    {id: '2', text: 'Opcion 2'},
+    {id: '3', text: 'Opcion 3'},
+    ]"
+    (onMessage)="handleMessageWithSelect($event)"
   />
 
 </div>
