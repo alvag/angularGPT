@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import {
   ChatMessageComponent,
+  GptMessageOrthographyComponent,
   MyMessageComponent,
   TextMessageBoxComponent,
   TextMessageBoxFileComponent,
@@ -21,6 +22,7 @@ import { OpenaiService } from '../../services';
     TextMessageBoxComponent,
     TextMessageBoxFileComponent,
     TextMessageBoxSelectComponent,
+    GptMessageOrthographyComponent,
   ],
   templateUrl: './orthography-page.component.html',
   styleUrl: './orthography-page.component.scss',
@@ -53,6 +55,7 @@ export default class OrthographyPageComponent {
         {
           isGpt: true,
           text: resp.message,
+          info: resp,
         },
       ] );
     } );
