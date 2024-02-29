@@ -6,7 +6,7 @@ import {
 } from '@components/text-boxes/text-message-box-select/text-message-box-select.component';
 import { TypingLoaderComponent } from '@components/typing-loader/typing-loader.component';
 import { Message } from '@interfaces/message.interface';
-import { OpenaiService } from '@services/openai.service';
+import { OpenaiService } from '../../presentation/services';
 
 @Component( {
   selector: 'app-chat-template',

@@ -19,14 +19,9 @@
     </div>
   </div>
 
-  <app-text-message-box-select
+  <app-text-message-box
     placeholder="Escribe aqui lo que deseas"
-    [options]="[
-    {id: '1', text: 'Opcion 1'},
-    {id: '2', text: 'Opcion 2'},
-    {id: '3', text: 'Opcion 3'},
-    ]"
-    (onMessage)="handleMessageWithSelect($event)"
+    (onMessage)="handleMessage($event)"
   />
 
 </div>

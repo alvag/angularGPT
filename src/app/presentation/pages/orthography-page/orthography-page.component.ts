@@ -3,13 +3,12 @@ import {
   ChatMessageComponent,
   MyMessageComponent,
   TextMessageBoxComponent,
-  TextMessageBoxEvent,
   TextMessageBoxFileComponent,
   TextMessageBoxSelectComponent,
   TypingLoaderComponent,
 } from '@components/index';
 import { Message } from '@interfaces/message.interface';
-import { OpenaiService } from '@services/openai.service';
+import { OpenaiService } from '../../services';
 
 
 @Component( {
@@ -29,16 +28,34 @@ import { OpenaiService } from '@services/openai.service';
 } )
 export default class OrthographyPageComponent {
 
-  messages = signal<Message[]>( [ {
-    text: 'Hello world!',
-    isGpt: true,
-  } ] );
-  isLoading = signal( false );
-
   openAiService = inject( OpenaiService );
 
-  handleMessageWithSelect( event: TextMessageBoxEvent ) {
-    console.log( event );
+  messages = signal<Message[]>( [] );
+  isLoading = signal( false );
+
+
+  handleMessage( prompt: string ) {
+    this.isLoading.set( true );
+
+    this.messages.update( prev => [
+      ...prev,
+      {
+        isGpt: false,
+        text: prompt,
+      },
+    ] );
+
+    this.openAiService.checkOrthography( prompt ).subscribe( resp => {
+      this.isLoading.set( false );
+
+      this.messages.update( prev => [
+        ...prev,
+        {
+          isGpt: true,
+          text: resp.message,
+        },
+      ] );
+    } );
   }
 
 }
