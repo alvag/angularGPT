@@ -2,7 +2,33 @@
   <div class="chat-messages">
     <div class="grid gap-y-2">
 
-      <app-chat-message text="Escribe el texto que quieres que revise"/>
+      <app-chat-message text="### Carro vs Moto
+
+**Carro:**
+*Pros:*
+- Mayor capacidad de transporte de pasajeros y carga.
+- Mayor seguridad en caso de accidentes.
+- Mayor comodidad y espacio interior.
+- Apto para transportar objetos grandes.
+
+*Contras:*
+- Mayor consumo de combustible.
+- Mayor costo de mantenimiento y seguro.
+- Dificultad para estacionarse en espacios reducidos.
+- Mayor congestión de tráfico en áreas urbanas.
+
+**Moto:**
+*Pros:*
+- Mayor agilidad para desplazarse en el tráfico.
+- Menor consumo de combustible.
+- Menor costo de mantenimiento y seguro.
+- Fácil estacionamiento en espacios reducidos.
+
+*Contras:*
+- Menor seguridad en caso de accidentes.
+- Menos protección contra las inclemencias del clima.
+- Menor capacidad de transporte de pasajeros y carga.
+- Requiere habilidades de manejo específicas."/>
 
       @for (message of messages(); track $index) {
         @if (message.isGpt) {
