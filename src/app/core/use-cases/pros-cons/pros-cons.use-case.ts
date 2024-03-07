@@ -11,7 +11,7 @@ export const prosConsUseCase = async ( prompt: string ) => {
       body: JSON.stringify( { prompt } ),
     } );
 
-    if ( !resp.ok ) throw new Error( 'No se pudo realizar la corrección ortográfica. Inténtalo de nuevo.' );
+    if ( !resp.ok ) throw new Error( 'No se pudo realizar la comparación. Inténtalo de nuevo.' );
 
     const response = await resp.json();
 
